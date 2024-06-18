@@ -5,9 +5,12 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import FormRegister from './components/Fragments/FormRegister';
-import FormLogin from './components/Fragments/FormLogin';
+import FormLogin from './pages/Auth/components/Login/FormLogin';
 import Home from './pages/Home/';
+import Pengaturan from './pages/Settings/components/Pengaturan/Pengaturan';
+import PengaturanAkun from './pages/Settings/components/PengaturanAkun/PengaturanAkun';
+import UbahKataSandi from './pages/Settings/components/Ubah Kata Sandi/Step1_UbahKataSandi';
+import KataSandiBaru from './pages/Settings/components/Ubah Kata Sandi/Step2_KataSandiBaru'
 
 const router = createBrowserRouter([
   {
@@ -19,12 +22,24 @@ const router = createBrowserRouter([
     element: <FormLogin />,
   },
   {
-    path: "/register",
-    element: <FormRegister />,
-  },
-  {
     path: "/home",
     element: <Home />,
+  },
+  {
+    path: "/pengaturan",
+    element: <Pengaturan />,
+  },
+  {
+    path: "/pengaturanAkun",
+    element: <PengaturanAkun />,
+  },
+  {
+    path: "/UbahKataSandi",
+    element: <UbahKataSandi />,
+  },
+  {
+    path: "/KataSandiBaru",
+    element: <KataSandiBaru />,
   },
 ]);
 
